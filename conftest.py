@@ -1,5 +1,5 @@
 import os
-from github import GitHubApp
+from githubapp import GitHubApp
 from datetime import datetime
 
 
