@@ -63,9 +63,6 @@ def pytest_runtest_makereport(item, call):
                         # 'text': "# SOME\n## Markdown Enabled\nText",
                         'annotations': [{
                             'path': item.location[0],
-                            'filename': item.location[0],
-                            'blob_href': 'http://blob.com',
-                            '`warning_level`': 'notice',     # notice, warning, or failure.
                             'start_line': 0,
                             'end_line': 0,
                             # 'start_column'	               # The start column of the annotation.
@@ -94,9 +91,6 @@ def pytest_runtest_makereport(item, call):
                 # 'text': "# SOME\n## Markdown Enabled\nText",
                 'annotations': [{
                     'path': entry.frame.code.raw.co_filename,
-                    'filename': entry.frame.code.raw.co_filename,
-                    'blob_href': 'http://blob.com',
-                    'warning_level': 'failure',      # notice, warning, or failure.
                     'start_line': entry.lineno,
                     'end_line': entry.lineno,
                     # 'start_column'	               # The start column of the annotation.
