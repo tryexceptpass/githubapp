@@ -1,0 +1,6 @@
+cryptography
+docopt
+pyjwt
+pytest
+requests
+
