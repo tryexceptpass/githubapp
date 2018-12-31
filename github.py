@@ -190,33 +190,33 @@ if __name__ == '__main__':
     if arguments['list'] and arguments['installations']:
         pprint(gh.list_installations())
 
-    run_id = gh.create_check_run('tryexceptpass', 'githubapp', 'pytest', 'ca3944e')['id']
-
-    pprint(gh.update_check_run(
-        'tryexceptpass',
-        'githubapp',
-        run_id,
-        started_at=datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ'),
-        status='in_progress',
-        # conclusion='failure',
-        # completed_at=datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ'),
-        output={
-            'title': 'SOME TITLE',
-            'summary': 'SOME SUMMARY',
-            'text': "# SOME\n## Markdown Enabled\nText\n\n```python\nprint('Hellow World')\n```",
-            'annotations': [{
-                'path': '.gh-runner.yml',
-                'filename': '.gh-runner.yml',
-                'blob_href': 'http://blob.com',
-                'warning_level': 'notice',
-                'start_line': 6,
-                'end_line': 6,
-                # 'start_column'	    # The start column of the annotation.
-                # 'end_column'	    # The end column of the annotation.
-                'annotation_level': 'notice',   # notice, warning, or failure.
-                'message': "Some Message",
-                'title': 'Some failure annontation title',
-                'raw_details': 'SOME REALLy Raw Deeetz',
-            }]
-        }
-    ))
+    # run_id = gh.create_check_run('tryexceptpass', 'githubapp', 'pytest', 'ca3944e')['id']
+    #
+    # pprint(gh.update_check_run(
+    #     'tryexceptpass',
+    #     'githubapp',
+    #     run_id,
+    #     started_at=datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ'),
+    #     status='in_progress',
+    #     # conclusion='failure',
+    #     # completed_at=datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ'),
+    #     output={
+    #         'title': 'SOME TITLE',
+    #         'summary': 'SOME SUMMARY',
+    #         'text': "# SOME\n## Markdown Enabled\nText\n\n```python\nprint('Hellow World')\n```",
+    #         'annotations': [{
+    #             'path': '.gh-runner.yml',
+    #             'filename': '.gh-runner.yml',
+    #             'blob_href': 'http://blob.com',
+    #             'warning_level': 'notice',
+    #             'start_line': 6,
+    #             'end_line': 6,
+    #             # 'start_column'	    # The start column of the annotation.
+    #             # 'end_column'	    # The end column of the annotation.
+    #             'annotation_level': 'notice',   # notice, warning, or failure.
+    #             'message': "Some Message",
+    #             'title': 'Some failure annontation title',
+    #             'raw_details': 'SOME REALLy Raw Deeetz',
+    #         }]
+    #     }
+    # ))
